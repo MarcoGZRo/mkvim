@@ -3,6 +3,24 @@
 Personal configuration for Nvim
 ---
 
+## Dependencies
+1. # Dependencies\
+- nvim
+- git
+- node
+- gcc/llvm
+- RipGrep
+- Lazygit choco install lazygit as Administrator
+
+## Plugins
+- Oil
+- Telescope
+- wigkey
+- Livegrep
+
+## Package Manager
+- Lazy
+
 ## Instalation
 
 ---
