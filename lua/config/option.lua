@@ -1,23 +1,35 @@
--- Leader
-vim.g.mapleader = " "
+local opt = vim.opt
+local o = vim.o
+local g = vim.g
+-- NOTE: Options
 
--- Line numbering
-vim.opt.number = true
 
--- Visual size tab
-vim.opt.tabstop = 4
 
--- Insert size tab
-vim.opt.softtabstop = 4
+g.mapleader = " "
 
--- Identation size tab
-vim.opt.shiftwidth = 4
 
--- True color
-vim.opt.termguicolors = true
 
--- Numero de Einstein xdxdxd
-vim.opt.relativenumber = true
+o.laststatus = 3
+o.showmode = false
+o.splitkeep = "screen"
+o.cursorline = true
+o.cursorlineopt = "number"
+o.expandtab = true
+opt.fillchars = { eob = " " }
+o.updatetime = 250
+o.signcolumn = "yes"
+
+
+opt.number = true
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
+opt.termguicolors = true
+opt.relativenumber = true
+
+
+
+
 
 -- @NOTE: If you have another theme installed, you can change it
-vim.cmd[[colorscheme token]]
+vim.cmd[[colorscheme carbonfox]]

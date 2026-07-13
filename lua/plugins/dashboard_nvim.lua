@@ -1,37 +1,70 @@
 return{
-  'nvimdev/dashboard-nvim',
+    'nvimdev/dashboard-nvim',
+    dependencies = {
+
+    },
   event = 'VimEnter',
-  config = function()
-    require('dashboard').setup {
-            -- initial values
-            theme = 'doom',
-            disable_move = false,
-            shortcut_type = 'number',
-
-            hide = {
-                statusline = 'true',
-                tabline = 'true',
-                winbar = 'true'
-            },
-
-            -- config
+    config = function()
+        local  map = require("telescope.builtin")
+        local db = require("dashboard").setup({
+            vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#e63946", bold = true }),
+            vim.api.nvim_set_hl(0, "DashboardKey", { fg = "#ff5252", bold = true }),
+            vim.api.nvim_set_hl(0, "DashboardIcon", { fg = "#9d4edd" }),
+            vim.api.nvim_set_hl(0, "DashboardShortCutIcon", { fg = "#4a5759" }),
+            vim.api.nvim_set_hl(0, "DashboardDesc", { fg = "#ced4da" }),
+            theme = "doom",
             config = {
-              center = {
-                {
-                    icon = ' ',
-                            icon_hl = 'Title',
-                            desc = 'Find File           ',
-                            desc_hl = 'String',
-                            key = 'b',
-                            keymap = 'SPC f f',
-                            key_hl = 'Number',
-                            key_format = ' %s', -- remove default surrounding `[]`
-                            action = 'lua print(2)'
+                header = {
+                    [[]],
+                    [[]],
+                    [[]],
+                    [[]],
+                    [[]],
+                    [[]],
+                    [[]],
+                    [[]],
+                    [[]],
+                    [[]],
+                    [[░███      ░███ ░██     ░██ ░██    ░██ ░██████░███      ░███ ]],
+                    [[░████   ░████ ░██    ░██  ░██    ░██   ░██  ░████   ░████ ]],
+                    [[░██░██ ░██░██ ░██   ░██   ░██    ░██   ░██  ░██░██ ░██░██ ]],
+                    [[░██ ░████ ░██ ░███████    ░██    ░██   ░██  ░██ ░████ ░██ ]],
+                    [[░██  ░██  ░██ ░██   ░██    ░██  ░██    ░██  ░██  ░██  ░██ ]],
+                    [[░██       ░██ ░██    ░██    ░██░██     ░██  ░██       ░██ ]],
+                    [[░██       ░██ ░██     ░██    ░███    ░██████░██       ░██ ]],
+                    [[]],
+                    [[]],
+                    [[]],
                 },
-              },
-              footer = {},
-              vertical_center = false, -- Center the Dashboard on the vertical (from top to bottom)
+                header_padding = 20,
+                center = {
+                    {
+                        icon = ' ',
+                        icon_hl = 'DashboardIcon',
+                        desc = 'Find Files           ',
+                        desc_hl = 'DashboardDesc',
+                        key = 'f',
+                        keymap = '<Leader> ff',
+                        key_hl = 'DashboardKey',
+                        key_format = ' %s', -- remove default surrounding `[]`
+                        action = map.find_files
+                    },
+                    {
+                        icon = '󰩉 ',
+                        icon_hl = 'DashboardIcon',
+                        desc = 'Live Grep           ',
+                        desc_hl = 'DashboardDesc',
+                        key = 'l',
+                        keymap = '<Leader> fg',
+                        key_hl = 'DashboardKey',
+                        key_format = ' %s', -- remove default surrounding `[]`
+                        action = map.live_grep
+                    }
+                },
+                footer = {
+                    "⚡ MhvIm - Configuración cargada con éxito ⚡"
+                }
             }
-    }
+        })
   end
 }

@@ -48,3 +48,7 @@ vim.keymap.set('n', '<leader>gd', '<cmd>Git diff<cr>', { silent = true })
 vim.keymap.set('n', '<leader>gS', '<cmd>Git stash<cr>', { silent = true })
 vim.keymap.set('n', '<leader>gB', '<cmd>Git blame<cr>', { silent = true })
 vim.keymap.set('n', '<leader>gR', '<cmd>Git remote<cr>', { silent = true })
+
+
+-- NOTE: LSP keymap
+vim.keymap.set('n', '<leader>ch', vim.lsp.buf.hover, { desc = "[C]ode [H]over Documentation"})
