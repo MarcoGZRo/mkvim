@@ -16,7 +16,7 @@ return {
 				lualine_x = {
 					"encoding",
 					function()
-						return ""
+						return ""
 					end,
 					"diagnostics",
 					"diff",
