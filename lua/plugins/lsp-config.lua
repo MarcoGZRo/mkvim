@@ -1,9 +1,10 @@
 return {
     --[[
-    NOTE: Plugin: mason
-    -- https://github.com/mason-org/mason.nvim
-    -- A package manager for Neovim
-    -- My config :D
+    NOTE:
+    Plugin: mason
+    GitHub: https://github.com/mason-org/mason.nvim
+    A package manager for Neovim
+    My config :D
     ]]
     {
         "mason-org/mason.nvim",

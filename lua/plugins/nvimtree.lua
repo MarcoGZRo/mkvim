@@ -1,4 +1,10 @@
 return {
+    --[[
+    NOTE:
+    Plugin: nvim-tree
+    GitHub: https://github.com/nvim-tree/nvim-tree.lua
+    A file explorer plugin for Neovim
+    ]]
     "nvim-tree/nvim-tree.lua",
     lazy = false,
     config = function()
