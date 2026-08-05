@@ -69,7 +69,7 @@ return {
                     }
                 },
                 footer = {
-                    "⚡ MhvIm - Configuración cargada con éxito ⚡"
+                    ":D"
                 }
             }
         })
