@@ -1,4 +1,10 @@
 return {
+    --[[
+    NOTE:
+    Plugin: nvim-notify
+    GitHub: https://github.com/rcarriga/nvim-notify
+    A notification plugin for Neovim
+    ]]
   "rcarriga/nvim-notify",
   config = function()
     vim.notify = require("notify")
