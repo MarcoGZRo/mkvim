@@ -12,7 +12,20 @@ return {
     config = function ()
         require('nightfox').setup({
             options = {
-                transparent = true, -- Boolean: Sets the background to transparent
+                transparent = true,     -- Boolean: Sets the background to transparent
+                styles = {
+                    -- NOTE: attr-list: bold, underline, undercurl, italic, blink, overline
+                    --comments        = 'none',
+                    --conditionals    = 'none',
+                    --functions       = 'none',
+                    --keywords        = 'none',
+                    --numbers         = 'none',
+                    --operators       = 'none',
+                    strings         = 'italic',
+                    --types           = 'none',
+                    --variables       = 'none'
+
+                }
             }
         })
     end
