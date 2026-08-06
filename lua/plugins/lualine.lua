@@ -1,4 +1,10 @@
 return {
+    --[[
+    NOTE:
+    Plugin: lualine
+    GitHub: https://github.com/nvim-lualine/lualine.nvim
+    A status line plugin for Neovim
+    ]]
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "kyazdani42/nvim-web-devicons" },
 	config = function()

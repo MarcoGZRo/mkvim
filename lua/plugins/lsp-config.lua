@@ -1,4 +1,11 @@
 return {
+    --[[
+    NOTE:
+    Plugin: mason
+    GitHub: https://github.com/mason-org/mason.nvim
+    A package manager for Neovim
+    My config :D
+    ]]
     {
         "mason-org/mason.nvim",
 
@@ -28,7 +35,6 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "lua_ls",
-                    "ts_ls",
                     "jdtls",
                 },
                 automatic_enable = false,
@@ -50,7 +56,6 @@ return {
 
 
             vim.lsp.enable("lua_ls")
-            vim.lsp.enable("ts_ls")
         end,
     },
 

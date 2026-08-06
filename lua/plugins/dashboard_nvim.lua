@@ -1,4 +1,11 @@
-return{
+return {
+    --[[
+    NOTE:
+    Plugin: dashboard_nvim
+    GitHub: https://github.com/nvimdev/dashboard-nvim
+    A dashboard plugin for Neovim
+    My config :D
+    ]]
     'nvimdev/dashboard-nvim',
     dependencies = {
 
@@ -62,7 +69,7 @@ return{
                     }
                 },
                 footer = {
-                    "⚡ MhvIm - Configuración cargada con éxito ⚡"
+                    ":D"
                 }
             }
         })

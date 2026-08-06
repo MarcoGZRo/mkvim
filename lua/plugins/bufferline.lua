@@ -1,4 +1,11 @@
 return {
+    --[[
+    NOTE:
+    Plugin: bufferline
+    GitHub: https://github.com/akinsho/bufferline.nvim
+    A buffer line plugin for Neovim
+    My config :D
+    ]]
 	'akinsho/bufferline.nvim',
 	version = "*",
 	dependencies = { 'nvim-tree/nvim-web-devicons' },

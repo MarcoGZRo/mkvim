@@ -1,4 +1,11 @@
 return {
+    --[[
+    NOTE:
+    Plugin: completation
+    GitHub: https://github.com/hrsh7th/nvim-cmp
+    A completation plugin for Neovim
+    My config :D
+    ]]
     {
         "hrsh7th/nvim-cmp",
         lazy = false,
