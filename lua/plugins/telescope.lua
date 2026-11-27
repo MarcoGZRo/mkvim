@@ -14,11 +14,20 @@ return {
     config = function()
         -- NOTE: Init telescope and live grep
         local telescope = require('telescope')
+
         telescope.setup({
-            telescope.load_extension("live_grep_args")
+            defaults = {
+                layout_strategy = "horizontal",
+
+
+                layout_config = {
+                    width = 0.9,
+                    height = 0.8
+                },
+            },
         })
 
-
+        telescope.load_extension("live_grep_args")
 
         -- builtin
         local builtin = require("telescope.builtin")
